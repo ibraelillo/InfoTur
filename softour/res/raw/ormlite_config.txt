@@ -1,0 +1,143 @@
+#
+# generated on 2013/04/18 03:14:22
+#
+# --table-start--
+dataClass=com.espinosoft.softour.database.Actividad
+tableName=actividad
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=nombre
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=description
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=inicio
+dataPersister=DATE
+# --field-end--
+# --field-start--
+fieldName=local_id
+# --field-end--
+# --field-start--
+fieldName=cliente
+foreign=true
+foreignAutoRefresh=true
+foreignAutoCreate=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.espinosoft.softour.database.Cliente
+tableName=clientes
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=owner
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=direccion
+# --field-end--
+# --field-start--
+fieldName=telefono
+# --field-end--
+# --field-start--
+fieldName=servicios
+foreignCollection=true
+# --field-end--
+# --field-start--
+fieldName=actividades
+foreignCollection=true
+# --field-end--
+# --field-start--
+fieldName=terceros
+foreignCollection=true
+foreignCollectionForeignFieldName=chefPartenaire
+# --field-end--
+# --field-start--
+fieldName=chefPartenaire
+foreign=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.espinosoft.softour.database.Servicio
+tableName=servicio
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=nombre
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=descripcion
+dataPersister=LONG_STRING
+# --field-end--
+# --field-start--
+fieldName=reserva_en_linea
+# --field-end--
+# --field-start--
+fieldName=link_reserva
+# --field-end--
+# --field-start--
+fieldName=cliente
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=ubicacion_latitud
+# --field-end--
+# --field-start--
+fieldName=ubicacion_longitud
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.espinosoft.softour.news.Noticia
+tableName=noticia
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=photo
+# --field-end--
+# --field-start--
+fieldName=titulo
+canBeNull=false
+indexName=noticia_titulo_idx
+# --field-end--
+# --field-start--
+fieldName=link
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=descripcion
+dataPersister=LONG_STRING
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=guid
+# --field-end--
+# --field-start--
+fieldName=fecha
+canBeNull=false
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

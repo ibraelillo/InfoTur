@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/list_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/list_item_date"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignTop="@+id/list_item_title"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:padding="3dp"
+        android:src="@drawable/ic_list_star" />
+
+    <ImageView
+        android:id="@+id/list_item_goto"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/list_item_date"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/list_item_title"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_list_goto" />
+
+    <TextView
+        android:id="@+id/list_item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/list_item_goto"
+        android:layout_toRightOf="@id/list_item_icon"
+        android:hint="Title"
+        android:shadowDx="1.0"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+    <TextView
+        android:id="@+id/list_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/list_item_title"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/list_item_goto"
+        android:layout_toRightOf="@+id/list_item_icon"
+        android:contentDescription="test"
+        android:hint="date"
+        android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+
+</RelativeLayout>
